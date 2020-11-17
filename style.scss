@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    text-decoration: none;
+    outline: 0;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+header {
+    background: linear-gradient(to right, #fa6585, darkorange);
+    form {
+        display: flex;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        * {
+            margin: 0 10px;
+        }
+        input {
+            height: 60px;
+            width: 100px;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: right;
+            background: transparent;
+            color: #fff;
+            &::placeholder {
+                color: #fff;
+            }
+        }
+        span {
+            font-size: 20px;
+        }
+        select {
+            height: 60px;
+            background: transparent;
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+            appearance: none;
+        }
+        button {
+            height: 50px;
+            padding: 0 30px;
+            border-radius: 3px;
+            background: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+main {
+    height: calc(100% - 100px);
+    display: flex;
+    >div {
+        width: 50%;
+        min-width: 50%;
+        max-width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &:first-child {
+            border-right: 1px solid #ddd;
+        }
+        .money-group {
+            margin: 5px 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            img.paper {
+                height: 130px;
+                width: 240px;
+                margin: 0 -100px;
+                &.usd {
+                    height: 100px;
+                }
+                &.try {
+                    height: 120px;
+                }
+            }
+            img.coin {
+                height: 80px;
+                margin: 0 -30px;
+            }
+        }
+    }
+}
