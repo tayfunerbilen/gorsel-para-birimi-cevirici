@@ -1,94 +1,138 @@
+@import"https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap";
+
 * {
     padding: 0;
     margin: 0;
+    list-style: none;
     border: 0;
-    text-decoration: none;
     outline: 0;
-    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: Mulish, sans-serif;
 }
 
 html, body {
     height: 100%;
 }
 
-header {
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
     background: linear-gradient(to right, #fa6585, darkorange);
-    form {
-        display: flex;
-        height: 100px;
-        align-items: center;
-        justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    * {
+        margin: 0 10px;
+    }
+    input {
+        height: 50px;
+        text-align: right;
+        font-size: 40px;
+        font-weight: bold;
+        width: 140px;
+        background: transparent;
         color: #fff;
-        * {
-            margin: 0 10px;
-        }
-        input {
-            height: 60px;
-            width: 100px;
-            font-size: 30px;
-            font-weight: bold;
-            text-align: right;
-            background: transparent;
+        &::placeholder {
             color: #fff;
-            &::placeholder {
-                color: #fff;
-            }
         }
-        span {
-            font-size: 20px;
-        }
-        select {
-            height: 60px;
-            background: transparent;
-            font-size: 30px;
-            font-weight: bold;
+    }
+    select {
+        height: 50px;
+        background-color: transparent;
+        appearance: none;
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+        cursor: pointer;
+    }
+    button {
+        height: 50px;
+        padding: 0 30px;
+        border-radius: 3px;
+        background: #fff;
+        font-size: 22px;
+        cursor: pointer;
+    }
+}
+
+.actions {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #ddd;
+    a {
+        height: 40px;
+        padding: 0 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        text-decoration: none;
+        margin: 0 6px;
+        color: #444;
+        line-height: 38px;
+        &.usd-btn {
+            background: linear-gradient(to bottom right, green, rgb(45, 223, 45));
             color: #fff;
-            appearance: none;
-        }
-        button {
-            height: 50px;
-            padding: 0 30px;
-            border-radius: 3px;
-            background: #fff;
-            font-size: 20px;
-            cursor: pointer;
+            border: none;
+            line-height: 40px;
         }
     }
 }
 
 main {
-    height: calc(100% - 100px);
+    height: calc(100% - 160px);
     display: flex;
     >div {
         width: 50%;
         min-width: 50%;
         max-width: 50%;
+        overflow: auto;
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 25px;
         &:first-child {
             border-right: 1px solid #ddd;
         }
         .money-group {
-            margin: 5px 100px;
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: center;
-            img.paper {
-                height: 130px;
-                width: 240px;
-                margin: 0 -100px;
-                &.usd {
-                    height: 100px;
-                }
-                &.try {
+            flex-wrap: wrap;
+            margin: 5px 130px;
+            img {
+                &.paper {
                     height: 120px;
+                    margin: 5px -120px;
+                    box-shadow: 2px 2px 10px 0 rgba(#000,.1);
+                    &.eur {
+                        width: 230px;
+                        height: 115px;
+                        margin: 5px -105px;
+                    }
+                    &.usd {
+                        width: 280px;
+                        height: 115px;
+                        margin: 5px -125px;
+                    }
+                }
+                &.coin {
+                    height: 70px;
+                    margin: 5px -20px;
+                    filter: drop-shadow(2px 2px 10px rgba(#000,.1));
                 }
             }
-            img.coin {
-                height: 80px;
-                margin: 0 -30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #ddd;
+            th, td {
+                padding: 5px 10px;
+                text-align: left;
+                border: 1px solid #ddd;
             }
         }
     }
