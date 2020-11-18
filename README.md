@@ -3,4 +3,7 @@
 Görselleştirmenin ne kadar önemli olduğunu atılan bir tweet ile anladım. Ve bu görselleştirmeyi TL'nin diğer para birimlerine çevrilmesinde kullanmak istedim.
 
 ## Demo
-[https://prototurk.com/turkishlira/index.php?amount=2324.7&currency=usd](https://prototurk.com/turkishlira/index.php?amount=2324.7&currency=usd)
+[https://prototurk.com/demo/gorsel-para-birimi-cevirici/index.php](https://prototurk.com/demo/gorsel-para-birimi-cevirici/index.php)
+
+## Video
+[https://www.youtube.com/watch?v=rgHLPIC9jDk](https://www.youtube.com/watch?v=rgHLPIC9jDk)
